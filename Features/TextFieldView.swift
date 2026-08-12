@@ -45,13 +45,13 @@ struct TextFieldView: View {
                     .transition(.move(edge: .bottom))
             }
         }
-        // .onAppear {
-        //     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-        //         withAnimation(.easeInOut(duration: 0.6)) {
-        //             showBanner = true
-        //         }
-        //     }
-        // }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                withAnimation(.easeInOut(duration: 0.6)) {
+                    showBanner = true
+                }
+            }
+        }
     }
 }
 
